@@ -14,24 +14,7 @@ var config = {
   black_list:    './config/black_list',
   host_filters:   './config/hostfilters.js',
   listen:[{ip:'0.0.0.0', port:80},//all ipv4 interfaces
-          {ip:'::', port:80}],//all ipv6 interfaces
-  listen_ssl:[{
-              ip:'0.0.0.0',//all *secure* ipv4 interfaces
-              port:443,
-              key:fs.readFileSync('/path/to/ssl.key'),
-              cert:fs.readFileSync('/path/to/ssl.crt'),
-              ca:[fs.readFileSync('/path/to/ca.pem'), 
-                  fs.readFileSync('/path/to/sub-ca.pem')]
-            },{ 
-              ip:'::',//all *secure* ipv6 interfaces
-              port:443,
-              key:fs.readFileSync('/path/to/ssl.key'),
-              cert:fs.readFileSync('/path/to/ssl.crt'),
-              ca:[fs.readFileSync('/path/to/ca.pem'), 
-                  fs.readFileSync('/path/to/sub-ca.pem')]
-
-            }   
-           ]
+          {ip:'::', port:80}]//all ipv6 interfaces
 };
 
 exports.config = config;
